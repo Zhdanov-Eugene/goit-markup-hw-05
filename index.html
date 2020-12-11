@@ -16,7 +16,7 @@
     <title>goit-markup-hw-05</title>
   </head>
   <body>
-    <!--шапка, навигация, адресс-->
+    <!-----------------ХЕДЕР----------------------->
     <header class="page-header">
       <div class="container main-nav">
         <nav class="main-nav">
@@ -51,18 +51,26 @@
       </div>
     </header>
 
-    <!--основной контейнер-->
+    <!---------------ОСНОВНОЙ КОНТЕЙНЕР-------------->
     <main>
-      <!--основной заголовок сайта, кнопка/ HERO-->
+      <!------------основной заголовок сайта, кнопка/ HERO----------->
       <section class="section hero">
         <h1 class="hero-title">
           Эффективные решения <br />
           для вашего бизнеса
         </h1>
-        <button class="button-primary">Заказать услугу</button>
+        <button type="button" class="button-primary" data-modal-open>
+          Заказать услугу
+        </button>
+        <div class="backdrop is-hidden" data-modal>
+          <div class="modal">
+            <p->text</p->
+            <button data-modal-close>Закрыть</button>
+          </div>
+        </div>
       </section>
 
-      <!--особенности-features-->
+      <!----------ОСОБЕННОСТИ-features-------------->
       <section class="section features">
         <h2 class="visually-hidden">Особенности</h2>
         <div class="container">
@@ -122,7 +130,7 @@
         </div>
       </section>
 
-      <!--чем ми занимаемся + картинки-->
+      <!----------ЧЕМ МЫ ЗАНИМАЕМСЯ----------->
       <section class="section work">
         <div class="container">
           <h2 class="section-title">Чем мы занимаемся</h2>
@@ -157,7 +165,7 @@
         </div>
       </section>
 
-      <!--наша команда-->
+      <!---------------НАША КОМАНДА-------------->
       <section class="section section-team">
         <div class="container">
           <h2 class="section-title caption">Наша команда</h2>
@@ -342,7 +350,7 @@
         </div>
       </section>
 
-      <!-- Постоянные клиенты -->
+      <!-------------- Постоянные клиенты ----------------->
       <section class="section clients-section">
         <div class="container">
           <h2 class="section-title">Постоянные клиенты</h2>
@@ -394,7 +402,7 @@
       </section>
     </main>
 
-    <!--подвал или footer-->
+    <!-------------------подвал или footer--------------->
     <footer class="footer">
       <div class="container">
         <div class="addres-info">
@@ -458,6 +466,7 @@
         </div>
       </div>
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
 
