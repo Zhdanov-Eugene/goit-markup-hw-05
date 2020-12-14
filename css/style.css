@@ -22,6 +22,8 @@
   --modal-bg-color-overlay: rgba(0, 0, 0, 0.2);
   --modal-vector-close-color: #000000;
   --overlay-section-work-color: rgba(47, 48, 58, 0.8);
+  --time-distribution-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-time: 250ms;
 }
 
 /* -----global attributes------- */
@@ -267,12 +269,15 @@ img {
   height: 100%;
 
   background-color: var(--modal-bg-color-overlay);
+  opacity: 1;
+  transition: var(--transition-time) var(--time-distribution-function);
 }
 
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
 }
+/* opacity- анемируемое свойство */
 
 .modal {
   position: absolute;
@@ -290,7 +295,12 @@ img {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+
+  opacity: 1;
+  transition: var(--transition-time) var(--time-distribution-function);
 }
+
+/* transform: translate - анемируемое свойство */
 
 .modal button {
   position: absolute;
@@ -311,7 +321,10 @@ img {
 
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
+
+  transition: var(--transition-time) var(--time-distribution-function);
 }
+
 .modal button:hover,
 .modal button:focus {
   fill: var(--accent-color);
