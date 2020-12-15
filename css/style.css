@@ -194,6 +194,8 @@ img {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+
+  transition: var(--transition-time) var(--time-distribution-function);
 }
 
 .address-header .link:not(:last-child) {
@@ -569,6 +571,8 @@ img {
   height: 44px;
   border-radius: 50%;
   fill: var(--cliennt-color);
+
+  transition: var(--transition-time) var(--time-distribution-function);
   /* background-color: var(--body-color); */
 }
 
@@ -598,6 +602,8 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  transition: var(--transition-time) var(--time-distribution-function);
 }
 
 .list .icon {
@@ -654,6 +660,8 @@ img {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+
+  transition: var(--transition-time) var(--time-distribution-function);
 }
 
 .address-footer .list li:not(:last-child) {
@@ -730,6 +738,8 @@ img {
   border-radius: 50%;
   fill: var(--body-color);
   background: rgba(255, 255, 255, 0.1);
+
+  transition: var(--transition-time) var(--time-distribution-function);
 }
 
 .footer .socials a:hover,
@@ -760,6 +770,7 @@ img {
   text-align: center;
 
   min-width: 73px;
+  transition: var(--transition-time) var(--time-distribution-function);
 }
 
 .content-selector .items + .items {

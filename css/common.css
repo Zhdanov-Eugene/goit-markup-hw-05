@@ -24,6 +24,7 @@
   --overlay-section-work-color: rgba(47, 48, 58, 0.8);
   --time-distribution-function: cubic-bezier(0.4, 0, 0.2, 1);
   --transition-time: 250ms;
+  --background-product-thumb-color: rgba(33, 150, 243, 0.9);
 }
 
 /* -----global attributes------- */
@@ -138,7 +139,7 @@ img {
 .site-nav .item + .item {
   margin-left: 50px;
 }
-
+/* В главной навигации, при помощи псевдоэлемента, сделано подчёркивание текущей ссылки */
 .site-nav .link {
   position: relative;
   display: block;
@@ -150,6 +151,8 @@ img {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+
+  transition: color var(--transition-time) var(--time-distribution-function);
 }
 .site-nav .link::after {
   content: '';
@@ -191,6 +194,8 @@ img {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+
+  transition: var(--transition-time) var(--time-distribution-function);
 }
 
 .address-header .link:not(:last-child) {
@@ -247,6 +252,8 @@ img {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+
+  transition: var(--transition-time) var(--time-distribution-function);
 }
 
 .address-footer .list li:not(:last-child) {
@@ -323,6 +330,8 @@ img {
   border-radius: 50%;
   fill: var(--body-color);
   background: rgba(255, 255, 255, 0.1);
+
+  transition: var(--transition-time) var(--time-distribution-function);
 }
 
 .footer .socials a:hover,
