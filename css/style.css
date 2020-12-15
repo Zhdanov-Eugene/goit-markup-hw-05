@@ -24,6 +24,7 @@
   --overlay-section-work-color: rgba(47, 48, 58, 0.8);
   --time-distribution-function: cubic-bezier(0.4, 0, 0.2, 1);
   --transition-time: 250ms;
+  --background-product-thumb-color: rgba(33, 150, 243, 0.9);
 }
 
 /* -----global attributes------- */
@@ -138,7 +139,7 @@ img {
 .site-nav .item + .item {
   margin-left: 50px;
 }
-
+/* В главной навигации, при помощи псевдоэлемента, сделано подчёркивание текущей ссылки */
 .site-nav .link {
   position: relative;
   display: block;
@@ -277,6 +278,7 @@ img {
   color: var(--title-text-color);
 }
 
+/* Модальное окно */
 .backdrop {
   position: fixed;
   z-index: 1;
@@ -466,6 +468,7 @@ img {
 } */
 
 /************** чем мы занимаемся ************/
+/* В секции Чем мы занимаемся текст спозиционирован поверх изображения. */
 .desc {
   position: relative;
   display: flex;
@@ -837,23 +840,59 @@ img {
 }
 .content .item:hover,
 .content .item:focus {
-  /* color: var(--accent-color); */
   cursor: pointer;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-/* ......альтернатива-1........ */
+/*  синий оверлей с текстом в секции Портфолио */
+.item .product {
+  position: relative;
+  overflow: hidden;
+}
 
+.product .overlay {
+  content: '';
+  position: absolute;
+  display: inline-block;
+
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+
+  background-color: var(--background-product-thumb-color);
+
+  transform: translateY(+100%);
+  transition: transform var(--transition-time) var(--time-distribution-function);
+}
+
+.content .item:hover .overlay,
+.content .item:focus.overlay {
+  transform: translateY(0);
+}
+
+.product .overlay p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+
+  letter-spacing: 0.03em;
+
+  margin: 63px 24px;
+
+  color: var(--body-color);
+
+  transition: transform var(--transition-time) var(--time-distribution-function);
+}
+
+/* ......альтернатива-1........ */
 /* .content .item:not(:nth-child(3n)) {
   margin-right: 30px;
 }
 .content .item:not(:nth-last-child(-n + 3)) {
   margin-bottom: 30px;
 } */
-
 /* ......альтернатива-2...... */
-
 /* .content .item + .item {
   margin-left: 30px;
 }
@@ -883,9 +922,15 @@ img {
 }
 
 /* Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.
-background: #2196F3;
-border-radius: 2px;
-width: 78px;
-height: 4px;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 28px;
+ or 156% ---
+ top-bottom 63
+ left right 24
 
-*/
+ 
+letter-spacing: 0.03em;
+color: #FFFFFF;
+background: rgba(33, 150, 243, 0.9); колор виезжаючего окна*/
